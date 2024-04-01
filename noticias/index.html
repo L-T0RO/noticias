@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding-top: 60px;
+      transition: background-color 0.5s ease;
+    }
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+    .card {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .card-img-top {
+      border-radius: 4px;
+      max-height: 150px;
+      object-fit: cover;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1a0dab;
+    }
+    .card-text {
+      font-size: 1rem;
+      color: #555;
+    }
+    .list-group-item {
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,.125);
+      font-size: 1rem;
+      color: #1a0dab;
+    }
+    .temperature-card {
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- barra de navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Noticias</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mundo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tecnología</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Deportes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- contenido principal -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Últimas Noticias</h2>
+        <div class="card mb-3">
+          <img src="noticias.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título de la Noticia</h5>
+            <p class="card-text">Descripción corta de la noticia. Puedes agregar más detalles aquí si es necesario.</p>
+            <a href="#" class="btn btn-primary">Leer Más</a>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <img src="noticias.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Título de la Noticia</h5>
+            <p class="card-text">Descripción corta de la noticia. Puedes agregar más detalles aquí si es necesario.</p>
+            <a href="#" class="btn btn-primary">Leer Más</a>
+          </div>
+        </div>
+        <!-- espacio para mas noti -->
+      </div>
+      <div class="col-md-4">
+        <!-- tendencias -->
+        <h2>Temas de Tendencia</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Tema 1</li>
+          <li class="list-group-item">Tema 2</li>
+          <li class="list-group-item">Tema 3</li>
+          <li class="list-group-item">Tema 4</li>
+          <li class="list-group-item">Tema 5</li>
+        </ul>
+        <!-- aca podria ir una api de temperatura -->
+        <div class="card mt-4 temperature-card">
+          <div class="card-body">
+            <h5 class="card-title">Temperatura Actual</h5>
+            <p class="card-text">22°C</p> <!-- Simulación de datos de temperatura -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- boton de modo oscuro -->
+  <div class="fixed-bottom mb-4 ml-4">
+    <button class="btn btn-dark" id="darkModeToggle">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Bootstrap JS lo hice con chat gpt esta parte jajajaj -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Función para cambiar de modo la página
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // Evento click del botón para alternar el modo oscuro
+    document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+  </script>
+</body>
+</html>
