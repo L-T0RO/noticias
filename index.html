@@ -13,9 +13,26 @@
       transition: background-color 0.5s ease;
     }
     .dark-mode {
-      background-color: #333;
-      color: #fff;
+      background-color: #353535;
+      color: #ffffff;
     }
+    .dark-mode .card  {
+    background-color: #646464; /* Fondo oscuro en modo oscuro */
+    color: #ffffff; /* Texto blanco en modo oscuro */
+    }
+
+    .dark-mode .card-text{
+      background-color: #646464; /* Fondo oscuro en modo oscuro */
+    color: #ffffff;
+    }
+    
+    .dark-mode .list-group-item {
+      background-color: #646464; /* Fondo oscuro en modo oscuro */
+      color: #ffffff; /* Texto blanco en modo oscuro */
+    }
+    
+
+
     .card {
       border: none;
       border-radius: 0;
@@ -102,7 +119,7 @@
       <div class="col-md-4">
         <!-- tendencias -->
         <h2>Temas de Tendencia</h2>
-        <ul class="list-group">
+        <ul class="list-group " >
           <li class="list-group-item">Tema 1</li>
           <li class="list-group-item">Tema 2</li>
           <li class="list-group-item">Tema 3</li>
@@ -122,7 +139,7 @@
 
   <!-- boton de modo oscuro -->
   <div class="fixed-bottom mb-4 ml-4">
-    <button class="btn btn-dark" id="darkModeToggle">Toggle Dark Mode</button>
+    <button class="btn btn-dark" id="darkModeToggle">modo oscuro</button>
   </div>
 
   <!-- Bootstrap JS lo hice con chat gpt esta parte jajajaj -->
